@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <h2>{{ post?.title }}</h2>
+    <p>{{ post?.body }}</p>
+  
+    <h3>Commentaires</h3>
+    <ul class="list-group">
+      <li *ngFor="let commentaire of commentaires" class="list-group-item">
+        <strong>{{ commentaire.name }}</strong> : {{ commentaire.body }}
+        <p>
+          Auteur : <a [routerLink]="['/user', post.userId]">{{ getAuteurName(post.userId) }}</a>
+        </p>
+      </li>
+    </ul>
+  </div>

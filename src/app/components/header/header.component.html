@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/users']">Réseau Social</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/users']">Utilisateurs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/posts']">Posts</a>
+        </li>
+      </ul>
+      <div class="ms-auto">
+        <button *ngIf="isLoggedIn()" (click)="logout()" class="btn btn-danger">Déconnexion</button>
+      </div>
+    </div>
+  </div>
+</nav>

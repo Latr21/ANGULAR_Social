@@ -1,0 +1,8 @@
+<div class="container mt-4">
+    <h2>Liste des utilisateurs</h2>
+    <ul class="list-group">
+      <li *ngFor="let utilisateur of utilisateurs" class="list-group-item">
+        <a [routerLink]="['/user', utilisateur.id]">{{ utilisateur.name }}</a>
+      </li>
+    </ul>
+  </div>
